@@ -1,0 +1,23 @@
+@model API_DOTNET.DTO.PostDTO
+@{
+    ViewData["Title"] = "Detalle del Post";
+}
+
+<br>
+<a class="nav-link text-dark" asp-area="" asp-controller="Post" asp-action="Index" style="border: 1px black solid; width: auto; display: inline; border-radius: 5px;">Volver</a>
+<br><br>
+
+<div>
+    @if (Model != null)
+    {
+        <h2>Detalle del Post</h2>
+        <h3>Título: @Model.title</h3>
+        <p>Cuerpo: @Model.body</p>
+        <p>Usuario ID: @Model.userId</p>
+        <p>Post ID: @Model.id</p>
+    }
+    else
+    {
+        <p>Error al cargar el post.</p>
+    }
+</div>

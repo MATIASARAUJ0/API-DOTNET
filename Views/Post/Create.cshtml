@@ -1,0 +1,29 @@
+@model API_DOTNET.DTO.PostDTO
+
+@{
+    ViewData["Title"] = "Crear Post";
+}
+
+<br>
+<a class="nav-link text-dark" asp-area="" asp-controller="Post" asp-action="Index" style="border: 1px black solid; width: auto; display: inline; border-radius: 5px;">Volver</a>
+<br><br>
+<h2>Crear un nuevo Post</h2>
+
+<form asp-controller="Post" asp-action="SaveNewPost" method="post">
+    <div class="form-group">
+        <label asp-for="userId">UserID:</label>
+        <input asp-for="userId" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="title">Título:</label>
+        <input asp-for="title" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="body">Contenido:</label>
+        <textarea asp-for="body" class="form-control"></textarea>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Crear Post</button>
+</form>
